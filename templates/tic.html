@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='tic.css') }}">
+</head>
+ <body>
+<div class="text-center"id="box">
+  <header>
+    <h1>Beat hamdan toe in TicTacToe</h1>
+  </header>
+<div id="message"></div>
+  <ul id="gameBoard">
+    <li class="tic"id="0">#</li>
+    <li class="tic"id="1">#</li>
+    <li class="tic"id="2">#</li>
+    <li class="tic"id="3">#</li>
+    <li class="tic"id="4">#</li>
+    <li class="tic"id="5">#</li>
+    <li class="tic"id="6">#</li>
+    <li class="tic"id="7">#</li>
+    <li class="tic"id="8">#</li>
+  </ul>
+  <div class="clearfix"></div>
+<footer>
+  <button id="reset">Reset</button>
+</footer>
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename='Tic.js') }}"></script>
+</body>
+</html>

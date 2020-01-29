@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+</head>
+<body>
+	<div class="loginbox">
+		<img src="../static/avatar.png" class="avatar">
+		<h1>Signup here</h1>
+		<form method='POST' action='/signup'>
+			<p>Email</p>
+		    <input type="text" name="Gmail" placeholder="Enter email">
+			<p>Username</p>
+		    <input type="text" name="name" placeholder="Enter Username">
+		    <p>Password</p>
+			<input type="password" name="psw" placeholder="Enter Password">
+			<p>Confirm password</p>
+			<input type="password" name="psw" placeholder="Confirm Password">
+			<input type="submit" name="" value="Signup">
+			<a href="{{ url_for('Login')}}">Already got an account ?</a>
+		</form>
+	</div>
+</body>
+</html>

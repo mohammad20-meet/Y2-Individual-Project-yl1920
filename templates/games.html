@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<style type="text/css">
+		#giffy
+		{
+ width: 100%;
+ height: 100%;
+		}
+	</style>
+</head>
+<body>
+<ul>
+<li><a href="{{ url_for('home') }}">Home</a></li>
+<li><a href="{{ url_for('Describtion') }}">Describtion</a></li>
+<li><a href="{{ url_for('games') }}">Games</a></li>
+<li><a href="{{ url_for('scoreboards') }}">Scoreboard</a></li>
+</ul>
+<img src="static/bg.jpg" id='giffy'>
+</body>
+
+</html>
