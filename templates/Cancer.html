@@ -2,6 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<img src="/static/Moe.jpg" id='giffy' width="100px" height="100px">
 <style>
 canvas {
     border:1px solid #d3d3d3;
@@ -26,8 +28,8 @@ function startGame() {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 1920;
-        this.canvas.height = 920;
+        this.canvas.width = 1500;
+        this.canvas.height = 800;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -131,7 +133,7 @@ function accelerate(n) {
 
 document.body.onkeyup = function(e){
     if(e.keyCode == 32){
-        accelerate(-0.02)
+        accelerate(0.5)
 
 
 
@@ -140,7 +142,7 @@ document.body.onkeyup = function(e){
 }
 document.body.onkeydown = function(e){
     if(e.keyCode == 32){
-        accelerate(0.22)
+        accelerate(-0.2)
 
 
 
@@ -149,6 +151,6 @@ document.body.onkeydown = function(e){
 }
 </script>
 <h1>My friend, My friend I know this is annoying but you chose this website,</h1>
-
+<p>Hippity hoppity hamdan stole your property</p>
 </body>
 </html>

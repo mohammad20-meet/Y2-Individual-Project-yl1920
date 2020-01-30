@@ -37,12 +37,12 @@ def Login():
 	if request.method == 'GET':
 		return render_template("Login.html")
 	else:
-		N = request.form['name']
+		Name = request.form['name']
 		ps = request.form['psw']
-		print(db_login(N, ps))
-		if db_login(N, ps) == True:
+		print(db_login(Name, ps))
+		if db_login(Name, ps) == True:
 			login_session['logged_in']="TRUE"
-			return render_template("home.html",Name = N)
+			return render_template("home.html",Name = Name)
 		else:
 			return render_template("Login.html", msg="wrong username or password") 
 

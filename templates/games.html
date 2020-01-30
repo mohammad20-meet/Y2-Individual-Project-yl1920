@@ -1,24 +1,90 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
-	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-	<style type="text/css">
-		#giffy
-		{
- width: 100%;
- height: 100%;
-		}
-	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style type="text/css">
+        #giffy {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        #ok{
+        	left: 80px;
+        }
+        #ok2{
+        	left: 810px;
+
+        }
+        #ok1{
+        	left: 1480px;
+        }
+        .hi {
+            width: 200px;
+            height: 200px;
+            top: 200px;
+            padding: 5px;
+            position: absolute;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+       #battoooon{
+       	top: 400px;
+            padding: 5px;
+            position: absolute;
+            left: 135px;
+       }
+       #battoooon1{
+       	top: 400px;
+            padding: 5px;
+            position: absolute;
+            left: 865px;
+       }
+       #battoooon2{
+       	top: 400px;
+            padding: 5px;
+            position: absolute;
+            left: 1535px;
+       }
+        /* Clearfix (clear floats) */
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        @media screen and (max-width: 500px) {
+            .hi {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<ul>
-<li><a href="{{ url_for('home') }}">Home</a></li>
-<li><a href="{{ url_for('Describtion') }}">Describtion</a></li>
-<li><a href="{{ url_for('games') }}">Games</a></li>
-<li><a href="{{ url_for('scoreboards') }}">Scoreboard</a></li>
-</ul>
-<img src="static/bg.jpg" id='giffy'>
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('Describtion') }}">Describtion</a></li>
+        <li><a href="{{ url_for('games') }}">Games</a></li>
+        <li><a href="{{ url_for('scoreboards') }}">Scoreboard</a></li>
+    </ul>
+    <!-- back ground image-->
+    <img src="static/bg.jpg" id='giffy'>
+
+    <div class="row">
+        <img src="static/index.png" class="hi" id="ok">
+        <img src="static/toe.png" class="hi" id="ok1">
+        <img src="static/question.jpeg" class="hi" id="ok2">
+    </div>
+<a href="{{ url_for('Dino') }}"><button type="button" class="btn btn-outline-danger" id="battoooon">Play Now!</button>
+</a>
+<a href="{{ url_for('Annoy') }}"><button type="button" class="btn btn-outline-danger" id="battoooon1">Play Now!</button></a>
+<a href="{{ url_for('tic') }}"><button type="button" class="btn btn-outline-danger" id="battoooon2">Play Now!</button></a>
 </body>
 
 </html>
